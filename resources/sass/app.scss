@@ -1,0 +1,120 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+.navbar-laravel {
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.map{
+    width: 50vw;
+    float: left;
+    height: 100vh;
+}
+
+.map iframe{
+    width: 100%;
+    height: 100%;
+    border: none;
+    zoom: 0.8;
+    transform: scale(0.8);
+    transform-origin: 0 0;
+    -moz-transform: scale(0.8);
+    -moz-transform-origin: 0 0;
+    -o-transform: scale(0.8);
+    -o-transform-origin: 0 0;
+    -webkit-transform: scale(0.8);
+    -webkit-transform-origin: 0 0;
+}
+
+.info{
+    float: left;
+    width: 45vw;
+    height: 100vh;
+}
+
+.info, .info .card{
+    text-align: center;
+}
+
+.info img{
+    max-width: 100%;
+    max-height: 65vh;
+    margin: 0 auto;
+}
+
+.liste{
+    width: 100%;
+    max-height: 50vh;
+    margin: 0 auto;
+}
+.liste .body{
+    max-height: 45vh;
+    overflow-y: scroll;
+}
+
+.liste table{
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    table-layout: fixed;
+}
+
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 84px;
+}
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
