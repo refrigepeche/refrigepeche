@@ -13,7 +13,7 @@ class CreateImputationsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Imputation', function (Blueprint $table) {
+        Schema::create('imputation', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('imputation');
         });

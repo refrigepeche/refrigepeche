@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 //use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
+use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Http\Request;
+
+use App\Exports\BonsExport;
 
 class BonController extends Controller
 {
@@ -32,5 +36,9 @@ class BonController extends Controller
         }else{
             abort(400,'Erreur dans le formulaire');
         }
+    }
+
+    public function exportBons(){
+        return Excel::download(new BonsExport, 'bons.xlsx');
     }
 }

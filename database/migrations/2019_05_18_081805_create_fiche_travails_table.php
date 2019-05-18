@@ -13,7 +13,7 @@ class CreateFicheTravailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Fiche_travail', function (Blueprint $table) {
+        Schema::create('fiche_travail', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('imputation');
             $table->date('numero');

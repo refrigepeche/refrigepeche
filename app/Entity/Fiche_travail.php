@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Fiche_travail extends Model
 {
-    protected $table = 'Fiche_travail';
+    protected $table = 'fiche_travail';
 
     protected $fillable = [ 
         'imputation',

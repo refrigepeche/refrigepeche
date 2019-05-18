@@ -13,7 +13,7 @@ class CreateDemandeAchatsTable extends Migration
      */
     public function up()
     {
-        Schema::create('Demande_achat', function (Blueprint $table) {
+        Schema::create('demande_achat', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('client');
             $table->string('ref'); 

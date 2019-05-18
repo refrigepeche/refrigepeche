@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Demande_achat extends Model
 {
-    protected $table = 'Demande_achat';
+    protected $table = 'demande_achat';
 
     protected $fillable = [ 
         'client',

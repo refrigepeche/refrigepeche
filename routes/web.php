@@ -3,7 +3,6 @@ use App\Http\Controllers\catalogueController;
 use App\User;
 use Illuminate\Support\Facades\Input;
 use Maatwebsite\Excel\Facades\Excel;
-use App\BONS;
 use App\Exports\ListExport;
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +52,15 @@ Route::get('/ministock', function () {
     return view('ministock');
 })->name('ministock');
 Route::post('/ministock', 'MinistockController@send');
+
+/*---------------------------------- Exportation base ----------------------------*/
+Route::name('exports')->group(function () {
+    Route::get('exportBase', 'BaseController@exportBase')->name('exportBase');
+    Route::get('exportBons', 'BonController@exportBons')->name('exportBons');
+    Route::get('exportConfirmes', 'ConfirmesController@exportConfirmes')->name('exportConfirmes');
+    Route::get('exportDemandeAchat', 'DemandeAchatController@exportDemandeAchat')->name('exportDemandeAchat');
+    Route::get('exportFicheDeTravail', 'FicheTravailController@exportFicheDeTravail')->name('exportFicheDeTravail');
+    Route::get('exportImputation', 'ImputationController@exportImputation')->name('exportImputation');
+    Route::get('exportRefuses', 'RefusesController@exportRefuses')->name('exportRefuses');
+    Route::get('exportUser', 'UserController@exportUser')->name('exportUser');
+});
