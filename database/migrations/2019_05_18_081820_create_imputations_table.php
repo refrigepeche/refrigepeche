@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateBonsTable extends Migration
+class CreateImputationsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,15 +13,9 @@ class CreateBonsTable extends Migration
      */
     public function up()
     {
-        Schema::create('BONS', function (Blueprint $table) {
+        Schema::create('Imputation', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('client');
-            $table->string('ref');
-            $table->integer('qte');
-            $table->string('unite');
             $table->string('imputation');
-            $table->string('type');
-            $table->timestamp('date');
         });
     }
 
@@ -32,6 +26,6 @@ class CreateBonsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('BONS');
+        Schema::dropIfExists('Imputation');
     }
 }

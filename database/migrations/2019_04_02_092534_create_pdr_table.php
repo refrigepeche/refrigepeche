@@ -23,6 +23,6 @@ class CreatePdrTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('BASE');
+        //Schema::dropIfExists('BASE');
     }
 }
